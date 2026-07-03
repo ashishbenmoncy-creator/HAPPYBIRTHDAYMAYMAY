@@ -233,17 +233,17 @@ document.addEventListener('DOMContentLoaded', () => {
      7. 10 THINGS I LOVE ABOUT YOU — sunflower petals
   ------------------------------------------------------------ */
   const reasons = [
-    "Your smile — it's the first thing that made me stay.",
-    "Your faith, steady even when life isn't.",
-    "Your kindness toward people who can't do anything for you.",
-    "Your laugh, completely unfiltered and real.",
-    "Your patience with me, again and again.",
-    "Your love — generous, without keeping score.",
-    "Your heart for Jesus, the center of everything you do.",
-    "Your care for others before yourself.",
-    "Your beautiful eyes, easily my favorite view.",
-    "Everything that makes you, you."
-  ];
+  "Your sassiness and the way you can make me laugh even on my worst days.",
+  "The energy you bring into every room and into my life.",
+  "Your heart for Jesus and your desire to follow Him above everything else.",
+  "Your beautiful eyes, the ones I could happily get lost in forever.",
+  "Everything that makes you... you. Every little quirk, every smile, every laugh.",
+  "Your courage to love someone who lives thousands of miles away.",
+  "For putting up with all my stupidity and craziness and somehow still loving me.",
+  "Your love for different cultures.",
+  "Your love for singing, dancing, and worshipping with all your heart.",
+  "Your beautiful artistic heart and the way you see beauty in God's creation."
+];
 
   const petalRing = document.getElementById('petal-ring');
   const petalCard = document.getElementById('petal-card');
