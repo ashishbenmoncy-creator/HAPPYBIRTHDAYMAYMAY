@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, May 🌻</title>
+
+<!-- Google Fonts: Fraunces (warm display serif), Quicksand (soft rounded body), Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- LOADING SCREEN — a sunflower blooms while the page prepares -->
+  <!-- ============================================================ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-sunflower">
+      <img src="assets/sunflower.svg" alt="" class="loader-sunflower-img">
+    </div>
+    <p class="loader-text">a little sunshine is loading&hellip;</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- AMBIENT BACKGROUND LAYERS — sit behind every section, fixed -->
+  <!-- petals drift down, particles glow, sunlight breathes slowly -->
+  <!-- ============================================================ -->
+  <div class="bg-layers" aria-hidden="true">
+    <div class="bg-mesh">
+      <span class="mesh-blob mesh-blob--1"></span>
+      <span class="mesh-blob mesh-blob--2"></span>
+      <span class="mesh-blob mesh-blob--3"></span>
+    </div>
+    <div class="bg-sunlight"></div>
+    <div class="bg-grain"></div>
+    <div id="petal-field" class="petal-field"></div>
+    <div id="particle-field" class="particle-field"></div>
+  </div>
+
+  <!-- cursor-follow glow + click effects live in their own layer -->
+  <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+  <div id="fx-layer" class="fx-layer" aria-hidden="true"></div>
+
+  <!-- progress dots for section navigation -->
+  <nav class="dot-nav" id="dot-nav" aria-label="Section navigation">
+    <button class="dot-nav__dot" data-target="hero" data-label="Home" aria-label="Home"></button>
+    <button class="dot-nav__dot" data-target="journey" data-label="Our Journey" aria-label="Our Journey"></button>
+    <button class="dot-nav__dot" data-target="gifts" data-label="Your Gifts" aria-label="Your Gifts"></button>
+    <button class="dot-nav__dot" data-target="petals" data-label="10 Things I Love" aria-label="10 Things I Love"></button>
+    <button class="dot-nav__dot" data-target="letter" data-label="The Letter" aria-label="The Letter"></button>
+    <button class="dot-nav__dot" data-target="pbj" data-label="Peanut Butter & Jelly" aria-label="Peanut Butter and Jelly"></button>
+    <button class="dot-nav__dot" data-target="finale" data-label="Finale" aria-label="Finale"></button>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- HERO / LANDING                                                -->
+    <!-- ============================================================ -->
+    <section id="hero" class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <span class="eyebrow">for my favorite person 🌻</span>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Happy Birthday</span>
+          <span class="hero-title-line hero-title-name">May <span class="heart-pop">❤️</span></span>
+        </h1>
+        <p class="hero-sub">A little corner of the internet, made just for you.</p>
+        <button id="begin-btn" class="btn btn--primary">
+          <span>Begin Our Story</span>
+          <span class="btn-seed">🌻</span>
+        </button>
+      </div>
+
+      <!-- hero illustration: a warm field horizon made of layered svg sunflowers -->
+      <div class="hero-field" aria-hidden="true">
+        <div class="hero-field-row hero-field-row--back">
+          <img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt="">
+        </div>
+        <div class="hero-field-row hero-field-row--front">
+          <img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt="">
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span></span>
+        <p>scroll</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1 — OUR JOURNEY (interactive tilt timeline)           -->
+    <!-- ============================================================ -->
+    <section id="journey" class="section journey">
+      <div class="section-head">
+        <span class="eyebrow">where it began</span>
+        <h2 class="section-title">Our Journey</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <article class="timeline-card reveal" data-tilt>
+          <div class="timeline-marker">🌻</div>
+          <div class="timeline-card-inner">
+            <span class="timeline-index">01</span>
+            <div class="timeline-photo placeholder-photo">
+              <span class="placeholder-label">Philippines</span>
+            </div>
+            <h3>Philippines</h3>
+            <p>The place where God brought our paths together.</p>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal" data-tilt>
+          <div class="timeline-marker">🌻</div>
+          <div class="timeline-card-inner">
+            <span class="timeline-index">02</span>
+            <div class="timeline-photo placeholder-photo">
+              <span class="placeholder-label">Long Distance</span>
+            </div>
+            <h3>Long Distance</h3>
+            <p>Distance never stopped God from writing our story.</p>
+          </div>
+        </article>
+
+        <article class="timeline-card reveal" data-tilt>
+          <div class="timeline-marker">🌻</div>
+          <div class="timeline-card-inner">
+            <span class="timeline-index">03</span>
+            <div class="timeline-photo placeholder-photo">
+              <span class="placeholder-label">India</span>
+            </div>
+            <h3>India</h3>
+            <p>The day our worlds felt a little closer.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2 — GIFT BOXES                                        -->
+    <!-- ============================================================ -->
+    <section id="gifts" class="section gifts">
+      <div class="section-head">
+        <span class="eyebrow">go on, open one</span>
+        <h2 class="section-title">Open Your Birthday Gifts</h2>
+        <p class="section-note">Tap each box. They'll stay open for you.</p>
+      </div>
+
+      <div class="gift-grid">
+
+        <!-- Gift 1: Photo -->
+        <div class="gift" data-gift="photo">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">A Photo</span>
+          </button>
+          <div class="gift-reveal">
+            <div class="placeholder-photo gift-reveal-photo">
+              <span class="placeholder-label">our favorite photo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift 2: Video -->
+        <div class="gift" data-gift="video">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">A Video</span>
+          </button>
+          <div class="gift-reveal">
+            <div class="placeholder-video">
+              <video controls poster="" preload="none">
+                <source src="assets/placeholder-video.mp4" type="video/mp4">
+                Your browser can't play this video.
+              </video>
+              <div class="placeholder-video-cover">
+                <span class="play-icon">▶</span>
+                <span class="placeholder-label">drop your video into assets/placeholder-video.mp4</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift 3: Voice note -->
+        <div class="gift" data-gift="voice">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">A Voice Note</span>
+          </button>
+          <div class="gift-reveal">
+            <div class="voice-note">
+              <button class="voice-note-play" aria-label="Play voice note">▶</button>
+              <div class="voice-note-waves">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <audio id="voice-audio" preload="none">
+                <source src="assets/placeholder-voice.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <p class="placeholder-label" style="margin-top:.5rem;">drop your recording into assets/placeholder-voice.mp3</p>
+          </div>
+        </div>
+
+        <!-- Gift 4: Bible verse -->
+        <div class="gift" data-gift="verse">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">A Bible Verse</span>
+          </button>
+          <div class="gift-reveal">
+            <blockquote class="verse-card">
+              <p>"This is the day the Lord has made; let us rejoice and be glad in it."</p>
+              <cite>Psalm 118:24</cite>
+            </blockquote>
+          </div>
+        </div>
+
+        <!-- Gift 5: 10 Reasons -->
+        <div class="gift" data-gift="reasons">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">10 Reasons I Love You</span>
+          </button>
+          <div class="gift-reveal">
+            <ol class="reasons-list">
+              <li>The way you pray before you worry.</li>
+              <li>Your laugh that shows up before the punchline does.</li>
+              <li>How gently you hold other people's hearts.</li>
+              <li>The way you still get excited about sunsets.</li>
+              <li>Your patience with me, always.</li>
+              <li>How you make ordinary days feel like an occasion.</li>
+              <li>The way your faith steadies both of us.</li>
+              <li>Your handwriting on little notes.</li>
+              <li>How you turn strangers into friends.</li>
+              <li>Simply, all of you — every version I've met so far.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Gift 6: Surprise memory -->
+        <div class="gift" data-gift="memory">
+          <button class="gift-box" aria-expanded="false">
+            <span class="gift-box-lid">🎁</span>
+            <span class="gift-box-label">A Surprise Memory</span>
+          </button>
+          <div class="gift-reveal">
+            <div class="placeholder-photo gift-reveal-photo">
+              <span class="placeholder-label">a memory only we know</span>
+            </div>
+            <p class="memory-caption">Replace this with the one memory that always makes us laugh.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3 — 10 THINGS I LOVE ABOUT YOU (clickable petals)     -->
+    <!-- ============================================================ -->
+    <section id="petals" class="section petals-section">
+      <div class="section-head">
+        <span class="eyebrow">petal by petal</span>
+        <h2 class="section-title">10 Things I Love About You</h2>
+        <p class="section-note">Tap a petal to open it.</p>
+      </div>
+
+      <div class="sunflower-interactive">
+        <div class="sunflower-center">🌻</div>
+        <div class="petal-ring" id="petal-ring">
+          <!-- petals injected by JS: 10 total -->
+        </div>
+      </div>
+
+      <div class="petal-card" id="petal-card" aria-live="polite">
+        <button class="petal-card-close" id="petal-card-close" aria-label="Close">✕</button>
+        <p class="petal-card-text" id="petal-card-text"></p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4 — THE ENVELOPE & LETTER                             -->
+    <!-- ============================================================ -->
+    <section id="letter" class="section letter-section">
+      <div class="section-head">
+        <span class="eyebrow">something to keep</span>
+        <h2 class="section-title">A Letter For You</h2>
+      </div>
+
+      <div class="envelope-wrap">
+        <div class="envelope" id="envelope" tabindex="0" role="button" aria-label="Open the letter">
+          <div class="envelope-back"></div>
+          <div class="letter-paper" id="letter-paper">
+            <p class="letter-greeting">My dearest May,</p>
+            <p>If you're reading this, it means the sunflowers led you all the way here — and I couldn't be happier that you stayed.</p>
+            <p>Replace this paragraph with whatever you want to tell her: the story of how you fell for her, the little things she does that you notice, the future you're picturing together.</p>
+            <p>Thank you for being God's beautiful gift in my life. I don't take one single day with you for granted.</p>
+            <p class="letter-signoff">Forever your Peanut Butter,<br><span class="letter-signature">Ashi</span></p>
+          </div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-seal">🌻</div>
+        </div>
+        <p class="envelope-hint" id="envelope-hint">tap the envelope to open it</p>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5 — PEANUT BUTTER & JELLY (signature interaction)     -->
+    <!-- ============================================================ -->
+    <section id="pbj" class="section pbj-section">
+      <div class="section-head">
+        <span class="eyebrow">us, in one bite</span>
+        <h2 class="section-title">Peanut Butter <span class="heart-inline">❤️</span> Jelly</h2>
+        <p class="section-note">Drag the jars together.</p>
+      </div>
+
+      <div class="pbj-stage" id="pbj-stage">
+        <div class="pbj-jar pbj-jar--pb" id="jar-pb" draggable="false">
+          <img src="assets/jar-pb.svg" alt="Peanut butter jar, representing Ashi">
+          <span class="pbj-jar-label">Peanut Butter</span>
+        </div>
+
+        <div class="pbj-jar pbj-jar--jelly" id="jar-jelly" draggable="false">
+          <img src="assets/jar-jelly.svg" alt="Strawberry jelly jar, representing May">
+          <span class="pbj-jar-label">Jelly</span>
+        </div>
+
+        <div class="pbj-merge-message" id="pbj-message">
+          <img src="assets/heart.svg" alt="" class="pbj-heart">
+          <p>Together is my favorite place.</p>
+        </div>
+      </div>
+      <p class="pbj-explainer">I'm brown, like peanut butter. You turn red like strawberry jelly every time you blush. Together — that's us.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FINAL SECTION                                                 -->
+    <!-- ============================================================ -->
+    <section id="finale" class="section finale">
+      <div class="finale-sky" aria-hidden="true"></div>
+      <div class="finale-field" aria-hidden="true">
+        <img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt=""><img src="assets/sunflower.svg" alt="">
+      </div>
+      <div class="finale-content">
+        <h2 class="finale-title">Happy Birthday May <span class="heart-pop">❤️</span></h2>
+        <p class="finale-text">Thank you for being God's beautiful gift in my life.</p>
+        <p class="finale-text finale-text--emphasis">I love you.</p>
+        <p class="finale-signature">&mdash; Ashi</p>
+        <button id="replay-btn" class="btn btn--secondary">Replay</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
